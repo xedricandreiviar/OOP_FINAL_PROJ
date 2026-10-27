@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account | Barangay Wawa</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-yellow-50">
+
+  <!-- Top Bar -->
+  <header class="bg-forest px-6 py-4 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="img/logo.png" alt="Logo" class="logo w-12 h-12 rounded-full object-cover">
+        <a href="index.html" class="text-2xl font-bold text-sage">Barangay Wawa</a>
+      </div>
+      <a href="index.html" class="text-lg text-amber-50 underline">Back to home</a>
+    </div>
+  </header>
+
+  <main class="px-6 py-12 md:py-20">
+    <div class="mx-auto w-full max-w-md">
+      <h1 class="text-3xl md:text-4xl font-bold text-forest">Create an account</h1>
+      <p class="mt-3 text-xl text-ink/70">For residents of Barangay Wawa. It takes about a minute.</p>
+
+      <!-- Not connected yet: ASP.NET Identity will receive this form later -->
+      <form action="#" method="post" class="mt-8 flex flex-col gap-6 rounded-3xl border border-forest/10 bg-white p-6 shadow-sm md:p-8">
+        <div>
+          <label for="name" class="text-lg font-semibold text-ink">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required class="mt-2 w-full rounded-2xl border border-forest/30 bg-yellow-50 px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-forest/40">
+        </div>
+        <div>
+          <label for="mobile" class="text-lg font-semibold text-ink">Mobile number</label>
+          <input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" placeholder="09XX XXX XXXX" required class="mt-2 w-full rounded-2xl border border-forest/30 bg-yellow-50 px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-forest/40">
+          <p class="mt-2 text-base text-ink/70">You will use this number to log in.</p>
+        </div>
+        <div>
+          <label for="address" class="text-lg font-semibold text-ink">Home address in the barangay</label>
+          <input id="address" name="address" type="text" autocomplete="street-address" required class="mt-2 w-full rounded-2xl border border-forest/30 bg-yellow-50 px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-forest/40">
+        </div>
+        <div>
+          <label for="password" class="text-lg font-semibold text-ink">Password</label>
+          <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required class="mt-2 w-full rounded-2xl border border-forest/30 bg-yellow-50 px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-forest/40">
+          <p class="mt-2 text-base text-ink/70">At least 8 characters.</p>
+        </div>
+        <div>
+          <label for="confirm" class="text-lg font-semibold text-ink">Confirm password</label>
+          <input id="confirm" name="confirm" type="password" autocomplete="new-password" required class="mt-2 w-full rounded-2xl border border-forest/30 bg-yellow-50 px-5 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-forest/40">
+          <label class="mt-3 flex items-center gap-3 text-lg text-ink/80">
+            <input id="show-password" type="checkbox" class="h-5 w-5 accent-forest">
+            Show passwords
+          </label>
+        </div>
+
+        <label class="flex items-start gap-3 text-base text-ink/80">
+          <input name="consent" type="checkbox" required class="mt-1 h-5 w-5 shrink-0 accent-forest">
+          <span>I agree that the barangay may use my information to process my requests. <a href="#" class="font-semibold text-forest underline">Read the privacy notice</a></span>
+        </label>
+
+        <button type="submit" class="w-full rounded-full bg-gold px-8 py-4 text-lg font-bold text-forest shadow-md hover:bg-gold/90 transition-colors">Create account</button>
+      </form>
+
+      <p class="mt-8 text-center text-xl text-ink/80">Already have an account? <a href="login.html" class="font-bold text-forest underline">Log in</a></p>
+      <!-- NEW: for residents who can't sign up on their own -->
+      <p class="mt-4 text-center text-lg text-ink/70">No phone or need help? Visit the barangay hall and staff can create your account for you.</p>
+    </div>
+  </main>
+
+<script>
+  const fields = [document.getElementById('password'), document.getElementById('confirm')];
+  const showPassword = document.getElementById('show-password');
+  showPassword.addEventListener('change', () => {
+    fields.forEach((field) => {
+      field.type = showPassword.checked ? 'text' : 'password';
+    });
+  });
+</script>
+
+  </body>
+</html>

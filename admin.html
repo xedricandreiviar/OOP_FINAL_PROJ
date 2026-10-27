@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Barangay Wawa</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="text-ink">
+
+    <!-- Top Bar -->
+    <header class="bg-forest px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="images/logo.png" alt="Logo" class="logo w-12 h-12 rounded-full object-cover">
+          <a class="text-2xl md:text-3xl font-bold text-sage" href="adminDashboard.html">Barangay Wawa</a>
+          <span class="hidden md:inline text-xl text-amber-50">Admin</span>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span class="hidden md:inline text-lg text-amber-50">Juan Dela Cruz, Barangay Secretary</span>
+
+          <button id="menu-btn" aria-label="Menu" class="md:hidden text-amber-50 p-2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="bg-yellow-50 md:flex md:min-h-[calc(100vh-5rem)]">
+
+      <!-- Menu -->
+      <aside id="sidebar" class="hidden md:block md:w-64 md:shrink-0 bg-white border-b md:border-b-0 md:border-r border-forest/10">
+        <nav class="flex flex-col gap-1 p-4">
+          <a href="adminDashboard.html" class="text-lg font-semibold px-4 py-3 rounded-lg bg-forest text-white">Dashboard</a>
+          <a href="adminRequests.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Document Requests</a>
+          <a href="adminAppointments.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Appointments</a>
+          <a href="adminResidents.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Residents</a>
+          <a href="adminServices.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Services</a>
+          <a href="adminAnnouncements.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Announcements</a>
+          <a href="adminReports.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Reports</a>
+          <a href="adminSettings.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-forest hover:bg-forest/10 transition-colors">Settings</a>
+          <a href="barangayWawa.html" class="text-lg font-semibold px-4 py-3 rounded-lg text-ink/70 hover:bg-forest/10 transition-colors mt-4 border-t border-forest/10">Log Out</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 min-w-0 px-4 py-8 md:px-8">
+
+        <h1 class="text-3xl md:text-4xl font-bold text-forest">Dashboard</h1>
+        <p class="text-lg text-forest/90 mt-2">Here is what needs your attention today.</p>
+
+        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+          <a href="adminAnnouncements.html" class="inline-block text-center bg-gold text-forest font-bold text-lg px-8 py-4 rounded-xl shadow-md hover:bg-gold/90 transition-colors">
+            Post Announcement
+          </a>
+          <a href="adminRequests.html" class="inline-block text-center border-2 border-forest text-forest font-bold text-lg px-8 py-4 rounded-xl hover:bg-forest hover:text-white transition-colors">
+            Add Walk-in Request
+          </a>
+        </div>
+
+        <!-- Summary -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <a href="adminRequests.html" class="bg-white rounded-xl shadow-sm p-5 border border-forest/10 hover:shadow-md transition-shadow">
+            <p class="text-base text-ink">Waiting for Review</p>
+            <p class="text-4xl font-bold text-forest mt-1">24</p>
+          </a>
+          <a href="adminAppointments.html" class="bg-white rounded-xl shadow-sm p-5 border border-forest/10 hover:shadow-md transition-shadow">
+            <p class="text-base text-ink">Appointments Today</p>
+            <p class="text-4xl font-bold text-forest mt-1">8</p>
+          </a>
+          <a href="adminRequests.html" class="bg-white rounded-xl shadow-sm p-5 border border-forest/10 hover:shadow-md transition-shadow">
+            <p class="text-base text-ink">Ready for Pickup</p>
+            <p class="text-4xl font-bold text-forest mt-1">13</p>
+          </a>
+          <a href="adminReports.html" class="bg-white rounded-xl shadow-sm p-5 border border-forest/10 hover:shadow-md transition-shadow">
+            <p class="text-base text-ink">Done This Month</p>
+            <p class="text-4xl font-bold text-forest mt-1">142</p>
+          </a>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6 mt-8">
+
+          <!-- Requests -->
+          <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-forest/10">
+            <div class="flex items-center justify-between gap-4 px-5 py-4 border-b border-forest/10">
+              <h2 class="text-2xl font-bold text-forest">Recent Requests</h2>
+              <a href="adminRequests.html" class="text-lg font-semibold text-forest underline">View all</a>
+            </div>
+
+            <div class="hidden md:grid md:grid-cols-[1.5fr_2fr_1fr_1fr_auto] gap-4 px-5 py-3 text-sm font-semibold text-ink/70 bg-yellow-50">
+              <span>Resident</span>
+              <span>Document</span>
+              <span>Date</span>
+              <span>Status</span>
+              <span class="w-24"></span>
+            </div>
+
+            <div class="divide-y divide-forest/10">
+
+              <div class="px-5 py-4 flex flex-col gap-2 md:grid md:grid-cols-[1.5fr_2fr_1fr_1fr_auto] md:items-center md:gap-4">
+                <span class="text-lg font-semibold">Maria Santos</span>
+                <span>Barangay Clearance</span>
+                <span class="text-ink/70">Oct 15</span>
+                <span class="inline-block w-fit text-sm font-semibold px-3 py-1 rounded-full bg-gold/20 text-forest">Waiting</span>
+                <a href="#" class="md:w-24 text-center bg-forest text-white font-bold px-5 py-2.5 rounded-lg hover:bg-forest/90 transition-colors">Review</a>
+              </div>
+
+              <div class="px-5 py-4 flex flex-col gap-2 md:grid md:grid-cols-[1.5fr_2fr_1fr_1fr_auto] md:items-center md:gap-4">
+                <span class="text-lg font-semibold">Pedro Reyes</span>
+                <span>Certificate of Residency</span>
+                <span class="text-ink/70">Oct 15</span>
+                <span class="inline-block w-fit text-sm font-semibold px-3 py-1 rounded-full bg-gold/20 text-forest">Waiting</span>
+                <a href="#" class="md:w-24 text-center bg-forest text-white font-bold px-5 py-2.5 rounded-lg hover:bg-forest/90 transition-colors">Review</a>
+              </div>
+
+              <div class="px-5 py-4 flex flex-col gap-2 md:grid md:grid-cols-[1.5fr_2fr_1fr_1fr_auto] md:items-center md:gap-4">
+                <span class="text-lg font-semibold">Rosa Garcia</span>
+                <span>Senior Citizen ID</span>
+                <span class="text-ink/70">Oct 14</span>
+                <span class="inline-block w-fit text-sm font-semibold px-3 py-1 rounded-full bg-forest/10 text-forest">Ready</span>
+                <a href="#" class="md:w-24 text-center border-2 border-forest text-forest font-bold px-5 py-2 rounded-lg hover:bg-forest hover:text-white transition-colors">Release</a>
+              </div>
+
+              <div class="px-5 py-4 flex flex-col gap-2 md:grid md:grid-cols-[1.5fr_2fr_1fr_1fr_auto] md:items-center md:gap-4">
+                <span class="text-lg font-semibold">Jose Ramos</span>
+                <span>Barangay Clearance</span>
+                <span class="text-ink/70">Oct 14</span>
+                <span class="inline-block w-fit text-sm font-semibold px-3 py-1 rounded-full bg-forest/10 text-forest">Ready</span>
+                <a href="#" class="md:w-24 text-center border-2 border-forest text-forest font-bold px-5 py-2 rounded-lg hover:bg-forest hover:text-white transition-colors">Release</a>
+              </div>
+
+              <div class="px-5 py-4 flex flex-col gap-2 md:grid md:grid-cols-[1.5fr_2fr_1fr_1fr_auto] md:items-center md:gap-4">
+                <span class="text-lg font-semibold">Ana Lopez</span>
+                <span>Barangay Blotter</span>
+                <span class="text-ink/70">Oct 13</span>
+                <span class="inline-block w-fit text-sm font-semibold px-3 py-1 rounded-full border border-forest/30 text-ink/70">Done</span>
+                <a href="#" class="md:w-24 text-center text-forest font-semibold underline py-2">View</a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Appointments -->
+          <div class="bg-white rounded-xl shadow-sm border border-forest/10 self-start">
+            <div class="px-5 py-4 border-b border-forest/10">
+              <h2 class="text-2xl font-bold text-forest">Today's Appointments</h2>
+            </div>
+
+            <div class="divide-y divide-forest/10">
+              <div class="flex items-center justify-between gap-4 px-5 py-4">
+                <div>
+                  <p class="text-lg font-semibold">Maria Santos</p>
+                  <p class="text-ink/70">Clearance pickup</p>
+                </div>
+                <p class="text-lg font-bold text-forest">9:30 AM</p>
+              </div>
+              <div class="flex items-center justify-between gap-4 px-5 py-4">
+                <div>
+                  <p class="text-lg font-semibold">Rosa Garcia</p>
+                  <p class="text-ink/70">Senior ID release</p>
+                </div>
+                <p class="text-lg font-bold text-forest">10:15 AM</p>
+              </div>
+              <div class="flex items-center justify-between gap-4 px-5 py-4">
+                <div>
+                  <p class="text-lg font-semibold">Jose Ramos</p>
+                  <p class="text-ink/70">Clearance pickup</p>
+                </div>
+                <p class="text-lg font-bold text-forest">1:00 PM</p>
+              </div>
+            </div>
+
+            <div class="px-5 py-4 border-t border-forest/10">
+              <a href="adminAppointments.html" class="text-lg font-semibold text-forest underline">See all appointments</a>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const sidebar = document.getElementById('sidebar');
+      menuBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden');
+      });
+    </script>
+
+  </body>
+</html>

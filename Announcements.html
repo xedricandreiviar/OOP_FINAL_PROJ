@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcements | Barangay Wawa</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+  <!-- Icons -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-forest px-6 py-4 shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="img/logo.png" alt="Logo" class="logo w-12 h-12 rounded-full object-cover">
+      <a href="index.html" class="leading-tight">
+        <span class="block text-2xl font-bold text-sage">Barangay Wawa</span>     
+       </a>
+    </div>
+    <div class="hidden lg:flex items-center gap-8 text-amber-50">
+      <a href="index.html" class="text-lg relative text-amber-50 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">Home</a>
+      <a href="about.html" class="text-lg relative text-amber-50 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">About Us</a>
+      <a href="services.html" class="text-lg relative text-amber-50 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">Services</a>
+      <!-- Announcements stays underlined because this is the current page -->
+      <a href="announcements.html" class="text-lg relative text-amber-50 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-gold">Announcements</a>
+    </div>
+    <div class="hidden lg:flex items-center gap-2">
+      <a href="login.html" class="inline-flex items-center rounded-full border-2 border-white/70 px-6 py-3 text-lg font-bold text-white hover:bg-white hover:text-forest transition-colors">Log In</a>
+      <a href="contact.html" class="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-lg font-bold text-forest shadow-md hover:bg-gold/90 transition-colors">
+        <svg class="h-5 w-5"><use href="#i-phone"/></svg>
+        Contact Us
+      </a>
+    </div>
+    <button id="menu-btn" aria-label="Menu" class="lg:hidden text-amber-50 p-2">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden mt-4 flex flex-col gap-1">
+    <a href="index.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10">Home</a>
+    <a href="about.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10">About Us</a>
+    <a href="services.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10">Services</a>
+    <a href="announcements.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10">Announcements</a>
+    <a href="contact.html" class="bg-gold text-forest font-bold text-lg px-3 py-2.5 rounded-lg text-center mt-2">Contact Us</a>
+  </div>
+</nav>
+
+  <!-- Page Header -->
+  <header class="bg-forest px-6 pb-14 pt-10 text-center">
+    <h1 class="mt-3 text-4xl md:text-6xl font-extrabold text-white">Announcements</h1>
+    <p class="mx-auto mt-4 max-w-2xl text-xl text-white/90">Notices and news from the barangay.</p>
+  </header>
+
+<div class="max-w-full mx-auto px-6 py-12 bg-yellow-50">
+
+  <!-- Important notice -->
+  <section class="max-w-6xl mx-auto">
+    <div class="overflow-hidden rounded-3xl border-2 border-gold bg-white shadow-sm md:grid md:grid-cols-2">
+     <img src="img/multipurp.jpg" alt="Short description of the photo" class="aspect-video h-full w-full object-cover md:aspect-auto">
+      <div class="flex flex-col justify-center p-6 md:p-8">
+        <div class="flex items-center justify-between gap-3">
+          <span class="rounded-full bg-gold px-4 py-1 text-sm font-bold text-forest">Important</span>
+          <p class="text-sm text-ink/70">Month Day, Year</p>
+        </div>
+        <h2 class="mt-4 text-2xl md:text-3xl font-bold text-forest">Important Notice Title</h2>
+        <p class="mt-3 text-lg text-ink/80">Details of the important notice go here. Keep it to a few short sentences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- All announcements -->
+  <section class="max-w-6xl mx-auto mt-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-forest">All announcements</h2>
+
+    <div class="mt-6 flex flex-wrap gap-3">
+      <button data-filter="all" class="rounded-full border-2 border-forest bg-forest px-6 py-2.5 text-lg font-bold text-white transition-colors">All</button>
+      <button data-filter="notices" class="rounded-full border-2 border-forest bg-white px-6 py-2.5 text-lg font-bold text-forest transition-colors">Notices</button>
+      <button data-filter="events" class="rounded-full border-2 border-forest bg-white px-6 py-2.5 text-lg font-bold text-forest transition-colors">Events</button>
+      <button data-filter="health" class="rounded-full border-2 border-forest bg-white px-6 py-2.5 text-lg font-bold text-forest transition-colors">Health</button>
+    </div>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article data-category="notices" class="flex flex-col overflow-hidden rounded-3xl border border-forest/10 bg-white shadow-sm">
+        <!-- IMAGE: replace this div with <img src="images/announcement-1.jpg" alt="Short description of the photo" class="aspect-video w-full object-cover"> -->
+        <div class="flex aspect-video items-center justify-center bg-emerald-100 font-semibold text-forest/70">Image placeholder</div>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-forest">Notices</span>
+            <p class="text-sm text-ink/70">Month Day, Year</p>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-ink">Announcement Title</h3>
+          <p class="mt-2 text-ink/80">Short description goes here.</p>
+          <a href="#" class="mt-auto inline-flex items-center gap-1 pt-4 font-bold text-forest hover:underline">Read more <svg class="h-5 w-5"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article data-category="events" class="flex flex-col overflow-hidden rounded-3xl border border-forest/10 bg-white shadow-sm">
+        <!-- IMAGE: replace this div with <img src="images/announcement-2.jpg" alt="Short description of the photo" class="aspect-video w-full object-cover"> -->
+        <div class="flex aspect-video items-center justify-center bg-emerald-100 font-semibold text-forest/70">Image placeholder</div>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-forest">Events</span>
+            <p class="text-sm text-ink/70">Month Day, Year</p>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-ink">Announcement Title</h3>
+          <p class="mt-2 text-ink/80">Short description goes here.</p>
+          <a href="#" class="mt-auto inline-flex items-center gap-1 pt-4 font-bold text-forest hover:underline">Read more <svg class="h-5 w-5"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article data-category="health" class="flex flex-col overflow-hidden rounded-3xl border border-forest/10 bg-white shadow-sm">
+        <!-- IMAGE: replace this div with <img src="images/announcement-3.jpg" alt="Short description of the photo" class="aspect-video w-full object-cover"> -->
+        <div class="flex aspect-video items-center justify-center bg-emerald-100 font-semibold text-forest/70">Image placeholder</div>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-forest">Health</span>
+            <p class="text-sm text-ink/70">Month Day, Year</p>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-ink">Announcement Title</h3>
+          <p class="mt-2 text-ink/80">Short description goes here.</p>
+          <a href="#" class="mt-auto inline-flex items-center gap-1 pt-4 font-bold text-forest hover:underline">Read more <svg class="h-5 w-5"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article data-category="notices" class="flex flex-col overflow-hidden rounded-3xl border border-forest/10 bg-white shadow-sm">
+        <!-- IMAGE: replace this div with <img src="images/announcement-4.jpg" alt="Short description of the photo" class="aspect-video w-full object-cover"> -->
+        <div class="flex aspect-video items-center justify-center bg-emerald-100 font-semibold text-forest/70">Image placeholder</div>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-forest">Notices</span>
+            <p class="text-sm text-ink/70">Month Day, Year</p>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-ink">Announcement Title</h3>
+          <p class="mt-2 text-ink/80">Short description goes here.</p>
+          <a href="#" class="mt-auto inline-flex items-center gap-1 pt-4 font-bold text-forest hover:underline">Read more <svg class="h-5 w-5"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article data-category="events" class="flex flex-col overflow-hidden rounded-3xl border border-forest/10 bg-white shadow-sm">
+        <!-- IMAGE: replace this div with <img src="images/announcement-5.jpg" alt="Short description of the photo" class="aspect-video w-full object-cover"> -->
+        <div class="flex aspect-video items-center justify-center bg-emerald-100 font-semibold text-forest/70">Image placeholder</div>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-forest">Events</span>
+            <p class="text-sm text-ink/70">Month Day, Year</p>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-ink">Announcement Title</h3>
+          <p class="mt-2 text-ink/80">Short description goes here.</p>
+          <a href="#" class="mt-auto inline-flex items-center gap-1 pt-4 font-bold text-forest hover:underline">Read more <svg class="h-5 w-5"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article data-category="health" class="flex flex-col overflow-hidden rounded-3xl border border-forest/10 bg-white shadow-sm">
+        <!-- IMAGE: replace this div with <img src="images/announcement-6.jpg" alt="Short description of the photo" class="aspect-video w-full object-cover"> -->
+        <div class="flex aspect-video items-center justify-center bg-emerald-100 font-semibold text-forest/70">Image placeholder</div>
+        <div class="flex flex-1 flex-col p-6">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-forest">Health</span>
+            <p class="text-sm text-ink/70">Month Day, Year</p>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-ink">Announcement Title</h3>
+          <p class="mt-2 text-ink/80">Short description goes here.</p>
+          <a href="#" class="mt-auto inline-flex items-center gap-1 pt-4 font-bold text-forest hover:underline">Read more <svg class="h-5 w-5"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Hook this up later when there are enough announcements to need paging -->
+    <div class="mt-10 text-center">
+      <a href="#" class="inline-block rounded-full border-2 border-forest px-8 py-3 text-lg font-bold text-forest hover:bg-forest hover:text-white transition-colors">Show older announcements</a>
+    </div>
+  </section>
+
+  <!-- Facebook -->
+  <section class="max-w-6xl mx-auto mt-16">
+    <div class="flex flex-col items-start justify-between gap-6 rounded-3xl border border-forest/10 bg-white p-8 shadow-sm md:flex-row md:items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-forest">Also on Facebook</h2>
+        <p class="mt-2 text-lg text-ink/80">We post updates on our Facebook page too.</p>
+      </div>
+      <a href="#" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-forest px-8 py-4 text-lg font-bold text-white hover:bg-forest/90 transition-colors">Visit our page</a>
+    </div>
+  </section>
+
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-forest px-6 py-12 text-amber-50">
+    <div class="max-w-6xl mx-auto flex flex-col gap-10">
+
+      <div class="flex flex-col gap-2">
+        <a href="#" class="flex items-center gap-2 text-amber-50 hover:text-white transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/>
+          </svg>
+          <span class="text-lg">Facebook Page</span>
+        </a>
+        <p class="text-lg"><span class="font-semibold text-gold">Hotline:</span> [Hotline Number]</p>
+        <p class="text-lg">[Barangay Wawa Address]</p>
+      </div>
+
+      <nav class="flex flex-col gap-1">
+        <a href="index.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors">Home</a>
+        <a href="about.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors">About Us</a>
+        <a href="services.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors">Services</a>
+        <a href="announcements.html" class="text-amber-50 text-lg px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors">Announcements</a>
+      </nav>
+
+      <p class="text-center text-amber-50">&copy; 2026 Barangay Wawa. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Category filter
+  const chips = document.querySelectorAll('[data-filter]');
+  const items = document.querySelectorAll('[data-category]');
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      chips.forEach((c) => {
+        c.classList.remove('bg-forest', 'text-white');
+        c.classList.add('bg-white', 'text-forest');
+      });
+      chip.classList.remove('bg-white', 'text-forest');
+      chip.classList.add('bg-forest', 'text-white');
+      items.forEach((item) => {
+        const show = chip.dataset.filter === 'all' || item.dataset.category === chip.dataset.filter;
+        item.classList.toggle('hidden', !show);
+      });
+    });
+  });
+</script>
+
+  </body>
+</html>
